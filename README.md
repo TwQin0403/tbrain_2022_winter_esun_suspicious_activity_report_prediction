@@ -17,7 +17,7 @@ the 6th place solution for 2022 winter e-sun bank suspicious activity report pre
 ## 執行流程:
 ```
 # 更改檔案名稱(見下方)
-# 將alert_date.csv, ccba.csv, cdtx.csv, custinfo.csv, dp.csv, private_x_alert_date.csv, public_x_alert_date.csv, remit.csv, y.csv放入train_data資料夾
+$ 將alert_date.csv, ccba.csv, cdtx.csv, custinfo.csv, dp.csv, private_x_alert_date.csv, public_x_alert_date.csv, remit.csv, y.csv放入train_data資料夾
 # 創建虛擬環境
 $ virtualenv e_sun_2022
 # 進入虛擬環境
