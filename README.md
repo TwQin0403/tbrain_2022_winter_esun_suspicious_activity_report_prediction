@@ -16,6 +16,8 @@ the 6th place solution for 2022 winter e-sun bank suspicious activity report pre
 
 ## 執行流程:
 ```
+# 更改檔案名稱(見下方)
+# 將alert_date.csv, ccba.csv, cdtx.csv, custinfo.csv, dp.csv, private_x_alert_date.csv, public_x_alert_date.csv, remit.csv, y.csv放入train_data資料夾
 # 創建虛擬環境
 $ virtualenv e_sun_2022
 # 進入虛擬環境
@@ -27,6 +29,29 @@ $ pip install -e .
 # training and inference
 $ cd src
 $ python main.py
+```
+
+## 更改檔案名稱
+
+### Not add private version
+```
+# train_x_alert_date.csv -> alert_date.csv
+# public_train_x_ccba_full_hashed.csv -> ccba.csv
+# public_train_x_cdtx0001_full_hashed.csv -> cdtx.csv
+# public_train_x_custinfo_full_hashed.csv -> custinfo.csv
+# public_train_x_dp_full_hashed.csv -> dp.csv
+# public_train_x_remit1_full_hashed.csv -> remit.csv
+# train_y_answer.csv -> y.csv
+```
+
+### add private version
+```
+# 將public_train_x_ccba_full_hashed.csv 與  private_x_ccba_full_hashed.csv concat reset_index -> ccba.csv
+# 將public_train_x_cdtx_full_hashed.csv 與  private_x_cdtx0001_full_hashed.csv concat reset_index -> cdtx.csv
+# 將public_train_x_custinfo_full_hashed.csv 與  private_x_custinfo_full_hashed.csv concat reset_index -> custinfo.csv
+# 將public_train_x_dp_full_hashed.csv 與  private_x_dp_full_hashed.csv concat reset_index -> dp.csv
+# 將public_train_x_remit_full_hashed.csv 與  private_x_remit1_full_hashed.csv concat reset_index -> remit.csv
+# 將train_y_answer.csv 與  public_y_answer concat reset_index -> y.csv
 ```
 
 ## Remark
