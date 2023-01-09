@@ -15,8 +15,18 @@ the 5th place solution for 2022 winter e-sun bank suspicious activity report pre
 ### Step1 訓練
 ![](https://raw.githubusercontent.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/main/docs/fig/step1.png)
 
+- 使用dp資訊計算有轉帳訊息的異常程度(by date) -&gt; 得到dp_abnormal資料
+- 使用cdtx資訊計算有交易訊息的異常程度(by date) -&gt;得到cdtx_abnormal 資料
+
 ### Step2 訓練:
 ![](https://raw.githubusercontent.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/main/docs/fig/step2.png)
+
+- 使用dp_abnormal, cdtx_abnormal, dp, cdtx資料去預測當天(cust_id, date)有alert_key的機率-&gt; 得到 is_alert_key_pred 資料
+
+### Step3 訓練：
+- 使用 dp_abnormal, cdtx_abnormal is_alert_key_pred, dp資訊, cdtx資訊 custinfo資訊, ccba資訊等 去預測 是否會被提報為SAR
+
+- 用total_asset作為分組來做用StratifiedGroupKFold的CV
 
 ## 檔案用途:
 - src/Preprocess/: 存放前處理的code
