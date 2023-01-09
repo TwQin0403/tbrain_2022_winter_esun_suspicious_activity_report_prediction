@@ -5,7 +5,7 @@ the 5th place solution for 2022 winter e-sun bank suspicious activity report pre
 ## 訓練方式
 
 ### 訓練流程
-![image](https://github.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/tree/main/docs/fig/train_process.png)
+![alt text](https://github.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/tree/main/docs/fig/train_process.png)
 
 大致分成三個步驟：
 - 計算dp表格與cdtx表格的異常值
@@ -13,10 +13,10 @@ the 5th place solution for 2022 winter e-sun bank suspicious activity report pre
 - 混合其他特徵做最終的訓練
 
 ### Step1 訓練
-![image](https://github.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/tree/main/docs/fig/step1.png)
+![alt text](https://github.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/tree/main/docs/fig/step1.png)
 
 ### Step2 訓練:
-![image](https://github.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/tree/main/docs/fig/step2.png)
+![alt text](https://github.com/TwQin0403/tbrain_2022_winter_esun_suspicious_activity_report_prediction/tree/main/docs/fig/step2.png)
 
 ## 檔案用途:
 - src/Preprocess/: 存放前處理的code
